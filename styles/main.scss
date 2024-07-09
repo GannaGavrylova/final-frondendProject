@@ -1,0 +1,86 @@
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1512px;
+  border: 2px solid blue;
+}
+
+.left-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin: 10px 40px 10px 15px;
+    width: 118px;
+  }
+
+  #search {
+    background: url(/assets/icons/lupaBlack.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 20px 20px;
+    padding: 11px 24px 11px 37px;
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+    color: $color-input;
+    font-size: 16px;
+  }
+}
+
+.counter-input {
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid #d9d9d9;
+  color: $color-input;
+  padding: 11px 93px 11px 17px;
+  font-size: 16px;
+}
+
+.search {
+  background-color: red;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 0px 8px 8px 0px;
+}
+.search > img {
+  width: 15px;
+  height: 15px;
+}
+
+.richt-header {
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.richt-header > img {
+  padding-right: 7px;
+}
+.language,
+.login-header {
+  padding-right: 20px;
+}
+
+.signAp-button {
+  width: 83px;
+  border: none;
+  background-color: $backroundColor-button;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 16px;
+  margin-right: 22px;
+  font-size: 14px;
+  font-weight: 500;
+}
