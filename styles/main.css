@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+}
+
 .container-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 350px;
   max-width: 1512px;
+  width: 100%;
   border: 2px solid blue;
 }
 
@@ -17,25 +24,24 @@
   justify-content: center;
   align-items: center;
 }
-.left-header img {
+.left-header .logo {
   margin: 10px 40px 10px 15px;
   width: 118px;
 }
-.left-header #search {
+.left-header #searchInput {
   background: url(/assets/icons/lupaBlack.svg);
   background-repeat: no-repeat;
   background-position: 10px;
   background-size: 20px 20px;
   padding: 11px 24px 11px 37px;
   width: 300px;
-  border-radius: 8px;
+  border-radius: 8px 0px 0px 8px;
   border: 1px solid #d9d9d9;
   color: #707070;
   font-size: 16px;
 }
 
 .counter-input {
-  border-radius: 8px 0px 0px 8px;
   border: 1px solid #d9d9d9;
   color: #707070;
   padding: 11px 93px 11px 17px;
@@ -50,6 +56,10 @@
   border-radius: 0px 8px 8px 0px;
 }
 
+.logo-mobil {
+  display: none;
+}
+
 .search > img {
   width: 15px;
   height: 15px;
@@ -62,13 +72,15 @@
   align-items: center;
 }
 
-.richt-header > img {
+.land_svg {
   padding-right: 7px;
 }
 
 .language,
 .login-header {
   padding-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .signAp-button {
@@ -81,4 +93,78 @@
   margin-right: 22px;
   font-size: 14px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 1440px) {
+  .container-header {
+    gap: 10%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .counter-input {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-header {
+    flex-wrap: wrap;
+  }
+  .left-header {
+    width: 100%;
+  }
+  .richt-header {
+    width: 100%;
+  }
+  #searchInput {
+    width: 75% !important;
+  }
+  .logo {
+    display: none;
+  }
+  .logo-mobil {
+    display: block;
+    margin-right: 25%;
+    margin-left: 10px;
+  }
+  .left-header {
+    flex-basis: 100%;
+    order: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+  .logo-mobil {
+    margin-left: 15px;
+    margin-right: 15%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .search {
+    margin-right: 31px;
+  }
+  .signAp-button {
+    width: 71px;
+    padding: 7px 13px;
+    margin-right: 7px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .language,
+  .login-header {
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 398px) {
+  .container-header {
+    min-width: 320px;
+  }
+  .logo-mobil,
+  #searchInput {
+    margin-left: 20px;
+  }
+  .language,
+  .login-header {
+    padding-right: 7px;
+  }
 }/*# sourceMappingURL=main.css.map */
