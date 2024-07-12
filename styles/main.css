@@ -95,6 +95,61 @@ body {
   font-weight: 500;
 }
 
+.fahrrad {
+  display: flex;
+  align-items: center;
+  border: 3px solid lightgreen;
+  max-width: 1196px;
+  margin-left: 158px;
+}
+
+.left_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 98px;
+  margin-bottom: 98px;
+  gap: 24px;
+  margin-right: 54px;
+  max-width: 608px;
+}
+
+.left_container > h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 52px;
+  color: #212121;
+}
+
+.left_container > p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.join-meetup {
+  background-color: #00798a;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: white;
+  width: 125px;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.join-meetup:hover {
+  background-color: rgb(255, 82, 154);
+  color: #212121;
+  transition: all 0.5s ease;
+}
+
+.right_container > img {
+  max-width: 379px;
+  max-height: 269px;
+}
+
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -103,6 +158,23 @@ body {
 @media screen and (max-width: 1024px) {
   .counter-input {
     display: none;
+  }
+  .fahrrad {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .left_container {
+    margin: 30px 21px 10px 21px;
+  }
+  .left_container > h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .join-meetup {
+    display: none;
+  }
+  .left_container > p {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -135,6 +207,10 @@ body {
   .logo-mobil {
     margin-left: 15px;
     margin-right: 15%;
+  }
+  .right_container > img {
+    max-width: 215px;
+    max-height: 152px;
   }
 }
 @media screen and (max-width: 425px) {
