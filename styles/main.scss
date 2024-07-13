@@ -303,6 +303,7 @@ main {
 
   .plan-of-events {
     grid-template-columns: repeat(3, 1fr);
+    transition: all 3ms ease;
     gap: 25px;
     justify-items: center;
   }
@@ -347,6 +348,21 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media screen and (max-width: 992px) {
+  //section-3 - HEADING
+  .heading-container {
+    justify-content: center;
+  }
+  .left-heading {
+    gap: 5px;
+    justify-self: start;
+  }
+
+  .right-heading {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   main {
     margin: auto;
@@ -380,13 +396,13 @@ main {
     order: 1;
   }
 
-  //section-3 - HEADING
+  // section - 4 PLAN-OF-EVENTS
 
-  .heading-container {
-    justify-content: center;
+  .plan-of-events {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: start;
   }
-
-  .right-heading {
+  br {
     display: none;
   }
 }
@@ -407,7 +423,9 @@ main {
   }
 
   // //section-3 - HEADING
-
+  .heading-container {
+    justify-content: start;
+  }
   .left-heading > h3 {
     font-size: 20px;
     line-height: 24px;
@@ -428,8 +446,8 @@ main {
   .media-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    margin-left: 15px;
+    justify-self: start;
+    // margin-left: 15px;
 
     width: 90%;
   }
@@ -493,6 +511,23 @@ main {
     font-size: 12px;
     font-weight: 500;
   }
+
+  // //section-3 - HEADING
+
+  .left-heading > h3 {
+    //mixin
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px;
+  }
+  .left-heading > input {
+    //mixin
+    font-size: 14px;
+    line-height: 16px;
+    background-position: 160px;
+    max-width: 190px;
+    padding: 5px;
+  }
 }
 @media screen and (max-width: 398px) {
   main {
@@ -513,17 +548,17 @@ main {
   }
 
   // //section-3 - HEADING
-  .heading-container {
-    margin-left: 21px;
-    margin-right: 0px;
-  }
+  // .heading-container {
+  //   margin-left: 21px;
+  //   margin-right: 0px;
+  // }
   .left-heading > h3 {
-    font-size: 16px;
-    line-height: 18px;
-  }
-  .left-heading > input {
-    max-width: 164px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 16px;
   }
+  // .left-heading > input {
+  //   max-width: 164px;
+  //   font-size: 13px;
+  //   line-height: 16px;
+  // }
 }
