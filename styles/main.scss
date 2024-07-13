@@ -98,13 +98,18 @@ body {
   font-weight: 500;
 }
 
+// container MAIN
+
+main {
+  max-width: 1196px;
+}
 // container MAIN section 1 - fahrrad
 
 .fahrrad {
   display: flex;
   align-items: center;
   border: 3px solid lightgreen;
-  max-width: 1196px;
+  // max-width: 1196px;
   margin-left: 158px;
 }
 
@@ -152,6 +157,113 @@ body {
   max-height: 269px;
 }
 
+// section - 3 HEADING
+
+.heading-container {
+  display: flex;
+  // max-width: $max-width;
+  justify-content: space-between;
+  margin: $marginLeftRight;
+  margin-top: 122px;
+  border: 2px solid yellow;
+}
+
+.left-heading {
+  display: flex;
+  gap: 25px;
+}
+.left-heading > h3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  color: $colorText;
+}
+.left-heading > input {
+  background-color: rgba(151, 202, 209, 0.2);
+  color: $backroundColor-button;
+  background-image: url(/assets/icons/Link.svg);
+  background-repeat: no-repeat;
+  background-position: 240px;
+  border: none;
+  padding-left: 10px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.right-heading {
+  display: flex;
+  align-items: center;
+}
+.right-heading > a {
+  color: $backroundColor-button;
+}
+
+// section - 4 PLAN OF EVENTS
+
+.plan-of-events {
+  display: grid;
+  border: 2px solid blue;
+  margin: $marginLeftRight;
+  margin-top: 24px;
+}
+.banner-event {
+  display: flex;
+  max-width: 272px;
+  max-height: 153px;
+}
+.event-discription {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+.title-event {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $colorText;
+}
+
+.event-discription > p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-input;
+  padding: 10px 0 10px;
+}
+.date-of-the-event {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.date-of-the-event > a {
+  text-transform: uppercase;
+  color: $colorText;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.number-of-participants,
+.format-of-the-event {
+  display: flex;
+  gap: 2px;
+}
+
+.number-of-participants > a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $colorText;
+}
+.format-of-the-event {
+  margin-left: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -162,6 +274,7 @@ body {
   .counter-input {
     display: none;
   }
+  //fahrrad-container
   .fahrrad {
     flex-direction: column;
     margin-left: 0;
@@ -178,6 +291,16 @@ body {
   }
   .left_container > p {
     font-size: 12px;
+  }
+  // sectiom - HEADING
+
+  .heading-container {
+    margin: 20px 128px 10px 128px;
+  }
+
+  .left-heading > input {
+    max-width: 239px;
+    background-position: 200px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -208,6 +331,18 @@ body {
     flex-basis: 100%;
     order: 1;
   }
+
+  //section-3 - HEADING
+
+  .heading-container {
+    margin-left: 41px;
+    margin-right: 21px;
+    justify-content: center;
+  }
+
+  .right-heading {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -215,10 +350,22 @@ body {
     margin-left: 15px;
     margin-right: 15%;
   }
-
+  //fahrrad-container
   .right_container > img {
     max-width: 215px;
     max-height: 152px;
+  }
+
+  // //section-3 - HEADING
+
+  .left-heading > h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .left-heading > input {
+    // background-position: 140px;
+    font-size: 18px;
+    line-height: 16px;
   }
 }
 @media screen and (max-width: 425px) {
@@ -252,5 +399,20 @@ body {
   .language,
   .login-header {
     padding-right: 7px;
+  }
+
+  // //section-3 - HEADING
+  .heading-container {
+    margin-left: 21px;
+    margin-right: 0px;
+  }
+  .left-heading > h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .left-heading > input {
+    max-width: 164px;
+    font-size: 13px;
+    line-height: 16px;
   }
 }
