@@ -96,7 +96,7 @@ body {
 }
 
 main {
-  max-width: 1196px;
+  max-width: 1512px;
   margin: 0 158px 0 158px;
 }
 
@@ -104,7 +104,6 @@ main {
   display: flex;
   align-items: center;
   border: 3px solid lightgreen;
-  width: 100%;
 }
 
 .left_container {
@@ -204,6 +203,10 @@ main {
   margin-top: 24px;
 }
 
+.media-container {
+  display: none;
+}
+
 .banner-event {
   display: flex;
   position: relative;
@@ -294,6 +297,11 @@ main {
   .container-header {
     gap: 10%;
   }
+  .plan-of-events {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-items: center;
+  }
 }
 @media screen and (max-width: 1024px) {
   .counter-input {
@@ -322,6 +330,9 @@ main {
   .left-heading > input {
     max-width: 239px;
     background-position: 200px;
+  }
+  .plan-of-events {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 768px) {
@@ -357,6 +368,9 @@ main {
   }
 }
 @media screen and (max-width: 576px) {
+  main {
+    margin: auto;
+  }
   .logo-mobil {
     margin-left: 15px;
     margin-right: 15%;
@@ -372,6 +386,54 @@ main {
   .left-heading > input {
     font-size: 18px;
     line-height: 16px;
+  }
+  .plan-of-events {
+    grid-template-columns: none;
+  }
+  .grid-container {
+    display: none;
+  }
+  .media-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 15px;
+    border: 2px solid red;
+    width: 90%;
+  }
+  .plan-of-events-media {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  .date-of-the-event-media {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 5px;
+  }
+  .date-of-the-event-media > p {
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #7c6f50;
+    font-weight: 600;
+  }
+  .title-event-media {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .leisure {
+    color: #707070;
+  }
+  .online_event {
+    background-image: url(/assets/icons/camera.svg);
+    background-repeat: no-repeat;
+    background-position: 0;
+    padding-left: 20px;
+    border: none;
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 @media screen and (max-width: 425px) {
