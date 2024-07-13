@@ -101,7 +101,8 @@ body {
 // container MAIN
 
 main {
-  max-width: 1512px;
+  // max-width: 1512px;
+
   margin: $marginLeftRight;
 }
 // container MAIN section 1 - fahrrad
@@ -110,7 +111,7 @@ main {
   display: flex;
   align-items: center;
   border: 3px solid lightgreen;
-  // width: 100%;
+  max-width: 1196px;
 }
 
 .left_container {
@@ -161,6 +162,7 @@ main {
 
 .heading-container {
   display: flex;
+  max-width: $max-width;
   width: 100%;
   justify-content: space-between;
 
@@ -204,9 +206,9 @@ main {
 
 .plan-of-events {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(4, 1fr);
-  border: 2px solid blue;
-
+  max-width: $max-width;
   margin-top: 24px;
 }
 .media-container {
@@ -346,6 +348,10 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
+  main {
+    margin: auto;
+    max-width: 80%;
+  }
   .container-header {
     flex-wrap: wrap;
   }
@@ -388,6 +394,7 @@ main {
 @media screen and (max-width: 576px) {
   main {
     margin: auto;
+    max-width: 80%;
   }
   .logo-mobil {
     margin-left: 15px;
@@ -423,7 +430,7 @@ main {
     flex-direction: column;
     justify-content: start;
     margin-left: 15px;
-    border: 2px solid red;
+
     width: 90%;
   }
   .plan-of-events-media {
@@ -437,7 +444,7 @@ main {
     gap: 5px;
     padding-top: 5px;
   }
-  .date-of-the-event-media > p {
+  .date-event {
     font-size: 11px;
     line-height: 15px;
     text-transform: uppercase;
@@ -450,6 +457,8 @@ main {
   }
   .leisure {
     color: $color-input;
+    font-size: 9px;
+    line-height: 12px;
   }
   .online_event {
     background-image: url(/assets/icons/camera.svg);
@@ -458,6 +467,11 @@ main {
     padding-left: 20px;
     border: none;
     font-size: 12px;
+    line-height: 12px;
+  }
+  .number-attendees {
+    margin-top: 16px;
+    font-size: 9px;
     line-height: 12px;
   }
 }
@@ -481,6 +495,10 @@ main {
   }
 }
 @media screen and (max-width: 398px) {
+  main {
+    margin: auto;
+    max-width: 80%;
+  }
   .container-header {
     min-width: 320px;
   }

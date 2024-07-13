@@ -96,7 +96,6 @@ body {
 }
 
 main {
-  max-width: 1512px;
   margin: 0 158px 0 158px;
 }
 
@@ -104,6 +103,7 @@ main {
   display: flex;
   align-items: center;
   border: 3px solid lightgreen;
+  max-width: 1196px;
 }
 
 .left_container {
@@ -155,6 +155,7 @@ main {
 
 .heading-container {
   display: flex;
+  max-width: 1196px;
   width: 100%;
   justify-content: space-between;
   margin-top: 122px;
@@ -198,8 +199,9 @@ main {
 
 .plan-of-events {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(4, 1fr);
-  border: 2px solid blue;
+  max-width: 1196px;
   margin-top: 24px;
 }
 
@@ -336,6 +338,10 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
+  main {
+    margin: auto;
+    max-width: 80%;
+  }
   .container-header {
     flex-wrap: wrap;
   }
@@ -370,6 +376,7 @@ main {
 @media screen and (max-width: 576px) {
   main {
     margin: auto;
+    max-width: 80%;
   }
   .logo-mobil {
     margin-left: 15px;
@@ -398,7 +405,6 @@ main {
     flex-direction: column;
     justify-content: start;
     margin-left: 15px;
-    border: 2px solid red;
     width: 90%;
   }
   .plan-of-events-media {
@@ -412,7 +418,7 @@ main {
     gap: 5px;
     padding-top: 5px;
   }
-  .date-of-the-event-media > p {
+  .date-event {
     font-size: 11px;
     line-height: 15px;
     text-transform: uppercase;
@@ -425,6 +431,8 @@ main {
   }
   .leisure {
     color: #707070;
+    font-size: 9px;
+    line-height: 12px;
   }
   .online_event {
     background-image: url(/assets/icons/camera.svg);
@@ -433,6 +441,11 @@ main {
     padding-left: 20px;
     border: none;
     font-size: 12px;
+    line-height: 12px;
+  }
+  .number-attendees {
+    margin-top: 16px;
+    font-size: 9px;
     line-height: 12px;
   }
 }
@@ -455,6 +468,10 @@ main {
   }
 }
 @media screen and (max-width: 398px) {
+  main {
+    margin: auto;
+    max-width: 80%;
+  }
   .container-header {
     min-width: 320px;
   }
