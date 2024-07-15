@@ -465,7 +465,54 @@ main {
 .create-group > p:last-of-type {
   color: $backroundColor-button;
 }
+
+// section - 9 New friendships on Meetup
+
+.new-friendships-on-meetup {
+  display: flex;
+  gap: 24px;
+  flex-direction: column; // mixin
+  max-width: $max-width;
+  width: 100%;
+  margin-top: 64px;
+
+  border: 3px solid rgb(230, 141, 24);
+}
+.new-friendships-on-meetup > h3 {
+  font-size: 28px;
+  line-height: 36px; //mixin
+  font-weight: 700;
+}
+.new-friendships-on-meetup > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-input;
+}
+
+.container-howTo-make-friends {
+  display: flex;
+  column-gap: 32px;
+}
+
+.howTo-make-friends > h4 {
+  margin: 24px 0 12px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+.howTo-make-friends > p:first-of-type {
+  color: $color-input;
+  margin-bottom: 16px;
+  font-size: 16px; //mixin
+  line-height: 24px;
+}
+.howTo-make-friends > p:last-of-type {
+  color: $backroundColor-button;
+  font-size: 16px; //mixin
+  line-height: 24px;
+}
 @media screen and (max-width: 1440px) {
+  // HEADER
   .container-header {
     gap: 10%;
   }
@@ -494,6 +541,23 @@ main {
   .container-popular-cities {
     flex-wrap: wrap;
     column-gap: 17px;
+  }
+
+  // section - 9 New friendships on Meetup
+
+  .container-howTo-make-friends {
+    display: flex;
+    flex-wrap: wrap;
+
+    column-gap: 2px;
+  }
+  .howTo-make-friends {
+    padding-right: 10px;
+  }
+  .howTo-make-friends > img {
+    max-width: 364px;
+    max-height: 185px;
+    margin-top: 32px;
   }
 }
 
@@ -550,6 +614,7 @@ main {
   }
 
   // section - 7 Popular cities on Meetup
+
   .container-popular-cities {
     margin: 0 29px 0 26px;
   }
@@ -568,8 +633,6 @@ main {
     flex-direction: column;
     margin-top: 18px;
     row-gap: 12px;
-
-    border: 2px solid violet;
   }
 }
 
@@ -755,6 +818,9 @@ main {
   .popular-cities-on-meetup {
     column-gap: 1px;
     row-gap: 1px;
+  }
+  .container-popular-cities {
+    margin: 0;
   }
 }
 @media screen and (max-width: 425px) {
