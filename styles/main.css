@@ -425,6 +425,52 @@ main {
   font-weight: 600;
 }
 
+.how-meetup-works {
+  max-width: 1196px;
+  width: 100%;
+  margin-top: 64px;
+  border: 3px solid rgb(37, 220, 58);
+}
+
+.how-meetup-works > h3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+#inform-create {
+  display: flex;
+  margin-top: 24px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  justify-content: space-between;
+  border: 2px solid violet;
+}
+
+.inform-block,
+.block-create-group {
+  display: flex;
+  background-color: rgba(151, 202, 209, 0.08);
+}
+
+.lupa,
+.plus {
+  padding: 32px 24px 24px;
+}
+
+.inform-container,
+.create-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 32px 129px 24px 0;
+}
+
+.inform-container > p:last-of-type,
+.create-group > p:last-of-type {
+  color: #00798a;
+}
+
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -499,6 +545,13 @@ main {
   }
   .mobil-none {
     display: none;
+  }
+  #inform-create {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    row-gap: 12px;
+    border: 2px solid violet;
   }
 }
 @media screen and (max-width: 992px) {
@@ -647,6 +700,14 @@ main {
     margin-top: 16px;
     font-size: 9px;
     line-height: 12px;
+  }
+  .container-top-categories {
+    -moz-column-gap: 3px;
+         column-gap: 3px;
+    row-gap: 10px;
+    justify-content: space-around;
+    margin-left: 0;
+    margin-right: 0;
   }
   .popular-cities-on-meetup {
     -moz-column-gap: 1px;

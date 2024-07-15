@@ -101,8 +101,6 @@ body {
 // container MAIN
 
 main {
-  // max-width: 1512px;
-
   margin: $marginLeftRight;
 }
 // container MAIN section 1 - fahrrad
@@ -423,6 +421,50 @@ main {
   line-height: 28px;
   font-weight: 600;
 }
+
+// section 8 How Meetup works
+
+.how-meetup-works {
+  max-width: $max-width;
+  width: 100%;
+  margin-top: 64px;
+
+  border: 3px solid rgb(37, 220, 58);
+}
+
+.how-meetup-works > h3 {
+  font-size: 28px; //mixin
+  line-height: 36px;
+  font-weight: 700;
+}
+#inform-create {
+  display: flex;
+  margin-top: 24px;
+  column-gap: 32px;
+  justify-content: space-between;
+  border: 2px solid violet;
+}
+.inform-block,
+.block-create-group {
+  display: flex;
+  background-color: $backColor;
+}
+.lupa,
+.plus {
+  padding: 32px 24px 24px;
+}
+.inform-container,
+.create-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 32px 129px 24px 0;
+}
+
+.inform-container > p:last-of-type,
+.create-group > p:last-of-type {
+  color: $backroundColor-button;
+}
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -517,6 +559,17 @@ main {
   }
   .mobil-none {
     display: none;
+  }
+
+  // section 8 How Meetup works
+
+  #inform-create {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    row-gap: 12px;
+
+    border: 2px solid violet;
   }
 }
 
@@ -687,6 +740,15 @@ main {
     margin-top: 16px;
     font-size: 9px;
     line-height: 12px;
+  }
+
+  // section - 6  Explore top categories
+  .container-top-categories {
+    column-gap: 3px;
+    row-gap: 10px;
+    justify-content: space-around;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   // section - 7 Popular cities on Meetup
