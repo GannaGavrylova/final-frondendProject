@@ -16,7 +16,6 @@ body {
   gap: 350px;
   max-width: 1512px;
   width: 100%;
-  border: 2px solid blue;
 }
 
 .left-header {
@@ -66,7 +65,6 @@ body {
 }
 
 .richt-header {
-  border: 2px solid green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +100,6 @@ main {
 .fahrrad {
   display: flex;
   align-items: center;
-  border: 3px solid lightgreen;
   max-width: 1196px;
 }
 
@@ -159,7 +156,6 @@ main {
   width: 100%;
   justify-content: space-between;
   margin-top: 122px;
-  border: 2px solid yellow;
 }
 
 .left-heading {
@@ -302,7 +298,6 @@ main {
   width: 100%;
   margin-top: 24px;
   background-color: rgba(151, 202, 209, 0.08);
-  border: 3px solid blueviolet;
 }
 
 .join_meetup_sign_up {
@@ -352,7 +347,6 @@ main {
   max-width: 1196px;
   width: 100%;
   margin-top: 64px;
-  border: 3px solid rgb(226, 43, 101);
 }
 
 .explore-top-categories > h3 {
@@ -391,7 +385,6 @@ main {
   max-width: 1196px;
   width: 100%;
   margin-top: 64px;
-  border: 3px solid rgb(59, 9, 141);
 }
 
 .popular-cities-on-meetup > h3 {
@@ -429,7 +422,6 @@ main {
   max-width: 1196px;
   width: 100%;
   margin-top: 64px;
-  border: 3px solid rgb(37, 220, 58);
 }
 
 .how-meetup-works > h3 {
@@ -444,7 +436,6 @@ main {
   -moz-column-gap: 32px;
        column-gap: 32px;
   justify-content: space-between;
-  border: 2px solid violet;
 }
 
 .inform-block,
@@ -478,7 +469,6 @@ main {
   max-width: 1196px;
   width: 100%;
   margin-top: 64px;
-  border: 3px solid rgb(230, 141, 24);
 }
 
 .new-friendships-on-meetup > h3 {
@@ -519,6 +509,109 @@ main {
   line-height: 24px;
 }
 
+footer {
+  background-color: #212121;
+  max-width: 1512px;
+  width: 100%;
+}
+
+.section-ons {
+  display: flex;
+  max-width: 1120px;
+  align-items: center;
+  margin: 34px 196px;
+  gap: 36px;
+}
+
+.section-ons > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  margin-top: 34px;
+}
+
+.section-ons > button {
+  color: white;
+  background-color: #212121;
+  border: 2px solid white;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 34px;
+}
+
+hr {
+  border: 1px solid #474646;
+  width: 1120px;
+  margin-left: 196px;
+}
+
+.container-section-two {
+  color: white;
+  display: flex;
+  max-width: 1120px;
+  margin: 34px 196px;
+}
+
+.navigation > p {
+  padding-bottom: 7px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+ul > li:last-of-type {
+  margin-right: 214px;
+  white-space: nowrap;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container-section-three {
+  max-width: 1120px;
+  margin: 34px 196px;
+}
+
+.followUs {
+  color: white;
+}
+
+.container-socialMedia-and-markets {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0 24px 0;
+}
+
+.social-media {
+  display: flex;
+  gap: 32px;
+}
+
+.social-media > img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-inform {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.mobal-footer-inform {
+  display: none;
+}
+
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -556,6 +649,9 @@ main {
     max-width: 364px;
     max-height: 185px;
     margin-top: 32px;
+  }
+  .footer-inform {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -614,6 +710,9 @@ main {
     margin-top: 18px;
     row-gap: 12px;
   }
+  ul > li:last-of-type {
+    margin-right: 10em;
+  }
 }
 @media screen and (max-width: 992px) {
   main {
@@ -631,6 +730,26 @@ main {
   }
   .join_meetup_sign_up > p {
     padding-right: 5px;
+  }
+  .section-ons {
+    margin: 30px 5px 35px 88px;
+    gap: 15px;
+  }
+  hr {
+    width: 75%;
+    margin-left: 88px;
+  }
+  .container-section-two,
+  .container-section-three {
+    margin-left: 88px;
+  }
+  .markets,
+  .footer-inform {
+    display: none;
+  }
+  .mobal-footer-inform {
+    display: block;
+    color: white;
   }
 }
 @media screen and (max-width: 768px) {
@@ -683,6 +802,9 @@ main {
     display: block;
     justify-items: center;
     align-self: center;
+  }
+  ul > li:last-of-type {
+    margin-right: 6em;
   }
 }
 @media screen and (max-width: 576px) {
@@ -778,6 +900,15 @@ main {
   .container-popular-cities {
     margin: 0;
   }
+  ul > li:last-of-type {
+    margin-right: 1em;
+  }
+  .section-ons,
+  hr,
+  .container-section-two,
+  .container-section-three {
+    margin-left: 3em;
+  }
 }
 @media screen and (max-width: 425px) {
   .search {
@@ -807,6 +938,20 @@ main {
     background-position: 160px;
     max-width: 190px;
     padding: 5px;
+  }
+  .section-ons,
+  hr,
+  .container-section-two,
+  .container-section-three {
+    margin-left: 2em;
+  }
+  .markets,
+  .footer-inform {
+    display: none;
+  }
+  .mobal-footer-inform {
+    display: block;
+    color: white;
   }
 }
 @media screen and (max-width: 398px) {
