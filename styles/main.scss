@@ -382,6 +382,47 @@ main {
   padding-top: 22px;
 }
 
+// section - 7 Popular cities on Meetup
+
+.popular-cities-on-meetup {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  max-width: $max-width;
+  width: 100%;
+  margin-top: 64px;
+
+  border: 3px solid rgb(59, 9, 141);
+}
+
+.popular-cities-on-meetup > h3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.popular-cities-on-meetup > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-input;
+}
+
+.container-popular-cities {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+.cities-on-meetup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 24px;
+}
+.cities-on-meetup > p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -404,6 +445,13 @@ main {
     row-gap: 11px;
     margin-left: 32px;
     margin-right: 54px;
+  }
+
+  // section - 7 Popular cities on Meetup
+
+  .container-popular-cities {
+    flex-wrap: wrap;
+    column-gap: 17px;
   }
 }
 
@@ -434,7 +482,7 @@ main {
   .left_container > p {
     font-size: 12px;
   }
-  // sectiom - HEADING
+  // section -2  HEADING
 
   .heading-container {
     margin: 20px 0px 10px 0px;
@@ -457,6 +505,18 @@ main {
   }
   .join_meetup_image {
     margin: 20px 56px 20px 20px;
+  }
+
+  // section - 7 Popular cities on Meetup
+  .container-popular-cities {
+    margin: 0 29px 0 26px;
+  }
+  .cities-on-meetup > img {
+    width: 153px;
+    height: 153px;
+  }
+  .mobil-none {
+    display: none;
   }
 }
 
@@ -627,6 +687,12 @@ main {
     margin-top: 16px;
     font-size: 9px;
     line-height: 12px;
+  }
+
+  // section - 7 Popular cities on Meetup
+  .popular-cities-on-meetup {
+    column-gap: 1px;
+    row-gap: 1px;
   }
 }
 @media screen and (max-width: 425px) {
