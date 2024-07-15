@@ -175,7 +175,7 @@ main {
 }
 
 .left-heading > input {
-  background-color: rgba(151, 202, 209, 0.2);
+  background-color: rgba(151, 202, 209, 0.08);
   color: #00798a;
   background-image: url(/assets/icons/Link.svg);
   background-repeat: no-repeat;
@@ -295,6 +295,56 @@ main {
   align-items: center;
 }
 
+.join-meetup-signUp {
+  display: flex;
+  align-items: center;
+  max-width: 1196px;
+  width: 100%;
+  margin-top: 24px;
+  background-color: rgba(151, 202, 209, 0.08);
+  border: 3px solid blueviolet;
+}
+
+.join_meetup_sign_up {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 56px;
+}
+
+.mobil-hands-in-the-air {
+  display: none;
+}
+
+.join_meetup_sign_up > h3 {
+  font-size: 28px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.join_meetup_sign_up > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+  padding-right: 75px;
+  max-width: 665px;
+}
+
+.signUp {
+  width: 192px;
+  color: white;
+  background-color: #e32359;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 67px;
+}
+
+.join_meetup_image {
+  margin: 20px 56px 20px 90px;
+}
+
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -307,6 +357,9 @@ main {
   }
 }
 @media screen and (max-width: 1024px) {
+  main {
+    margin: 0 100px 0 158px;
+  }
   .counter-input {
     display: none;
   }
@@ -337,8 +390,17 @@ main {
   .plan-of-events {
     grid-template-columns: repeat(2, 1fr);
   }
+  .join_meetup_sign_up {
+    margin-left: 6px;
+  }
+  .join_meetup_image {
+    margin: 20px 56px 20px 20px;
+  }
 }
 @media screen and (max-width: 992px) {
+  main {
+    margin: 0 100px 0 100px;
+  }
   .heading-container {
     justify-content: center;
   }
@@ -348,6 +410,9 @@ main {
   }
   .right-heading {
     display: none;
+  }
+  .join_meetup_sign_up > p {
+    padding-right: 5px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -385,6 +450,21 @@ main {
   }
   br {
     display: none;
+  }
+  .imagSU {
+    display: none;
+  }
+  .mobil-hands-in-the-air {
+    display: block;
+    justify-items: center;
+    align-self: center;
+    max-width: 238px;
+    max-height: 136px;
+  }
+  .signUp {
+    display: block;
+    justify-items: center;
+    align-self: center;
   }
 }
 @media screen and (max-width: 576px) {
@@ -514,5 +594,8 @@ main {
   .left-heading > h3 {
     font-size: 12px;
     line-height: 16px;
+  }
+  .join_meetup_sign_up > h3 {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

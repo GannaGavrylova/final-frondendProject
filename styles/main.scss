@@ -181,7 +181,7 @@ main {
   color: $colorText;
 }
 .left-heading > input {
-  background-color: rgba(151, 202, 209, 0.2);
+  background-color: $backColor;
   color: $backroundColor-button;
   background-image: url(/assets/icons/Link.svg);
   background-repeat: no-repeat;
@@ -294,6 +294,56 @@ main {
   align-items: center;
 }
 
+// section - 5 Join Meetup Registretion
+
+.join-meetup-signUp {
+  display: flex;
+  align-items: center;
+  max-width: $max-width;
+  width: 100%;
+  margin-top: 24px;
+  background-color: $backColor;
+  border: 3px solid blueviolet;
+}
+
+.join_meetup_sign_up {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 56px;
+}
+.mobil-hands-in-the-air {
+  display: none;
+}
+
+.join_meetup_sign_up > h3 {
+  font-size: 28px;
+  line-height: 36px;
+  color: $colorText;
+}
+
+.join_meetup_sign_up > p {
+  font-size: 16px;
+  line-height: 24px;
+  color: $colorText;
+  padding-right: 75px;
+  max-width: 665px;
+}
+
+.signUp {
+  width: 192px;
+  color: $color-text;
+  background-color: #e32359;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 67px;
+}
+.join_meetup_image {
+  margin: 20px 56px 20px 90px;
+}
+
 @media screen and (max-width: 1440px) {
   .container-header {
     gap: 10%;
@@ -310,6 +360,11 @@ main {
 }
 
 @media screen and (max-width: 1024px) {
+  main {
+    margin: 0 100px 0 158px;
+  }
+  // HEADER
+
   .counter-input {
     display: none;
   }
@@ -347,9 +402,20 @@ main {
   .plan-of-events {
     grid-template-columns: repeat(2, 1fr);
   }
+  // section - 5 Join Meetup Registretion
+
+  .join_meetup_sign_up {
+    margin-left: 6px;
+  }
+  .join_meetup_image {
+    margin: 20px 56px 20px 20px;
+  }
 }
 
 @media screen and (max-width: 992px) {
+  main {
+    margin: 0 100px 0 100px;
+  }
   //section-3 - HEADING
   .heading-container {
     justify-content: center;
@@ -361,6 +427,12 @@ main {
 
   .right-heading {
     display: none;
+  }
+
+  // section - 5 Join Meetup Registretion
+
+  .join_meetup_sign_up > p {
+    padding-right: 5px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -405,6 +477,24 @@ main {
   br {
     display: none;
   }
+
+  // section - 5 Join Meetup Registretion
+
+  .imagSU {
+    display: none;
+  }
+  .mobil-hands-in-the-air {
+    display: block;
+    justify-items: center; //mixin
+    align-self: center;
+    max-width: 238px;
+    max-height: 136px;
+  }
+  .signUp {
+    display: block;
+    justify-items: center; //mixin
+    align-self: center;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -447,8 +537,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-self: start;
-    // margin-left: 15px;
-
     width: 90%;
   }
   .plan-of-events-media {
@@ -515,14 +603,12 @@ main {
   // //section-3 - HEADING
 
   .left-heading > h3 {
-    //mixin
-    font-size: 14px;
+    font-size: 14px; //mixin
     line-height: 16px;
     padding: 5px;
   }
   .left-heading > input {
-    //mixin
-    font-size: 14px;
+    font-size: 14px; //mixin
     line-height: 16px;
     background-position: 160px;
     max-width: 190px;
@@ -548,17 +634,14 @@ main {
   }
 
   // //section-3 - HEADING
-  // .heading-container {
-  //   margin-left: 21px;
-  //   margin-right: 0px;
-  // }
+
   .left-heading > h3 {
     font-size: 12px;
     line-height: 16px;
   }
-  // .left-heading > input {
-  //   max-width: 164px;
-  //   font-size: 13px;
-  //   line-height: 16px;
-  // }
+
+  // section - 5 Join Meetup Registretion
+  .join_meetup_sign_up > h3 {
+    font-size: 20px;
+  }
 }
