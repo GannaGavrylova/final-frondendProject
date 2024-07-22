@@ -16,6 +16,7 @@
   .logo {
     margin: 10px 40px 10px 15px;
     width: 118px;
+    cursor: pointer;
   }
 
   #searchInput {
@@ -45,6 +46,7 @@
   width: 42px;
   height: 42px;
   border-radius: 0px 8px 8px 0px;
+  cursor: pointer;
 }
 
 .logo-mobil {
@@ -69,6 +71,7 @@
   padding-right: 20px;
   font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .signAp-button {
@@ -81,6 +84,7 @@
   margin-right: 22px;
   font-size: 14px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1440px) {
@@ -101,11 +105,61 @@
 @media screen and (max-width: 992px) {
 }
 @media screen and (max-width: 768px) {
+  .container-header {
+    flex-wrap: wrap;
+  }
+  .left-header {
+    width: 100%;
+  }
+  .richt-header {
+    width: 100%;
+  }
+
+  #searchInput {
+    width: 75% !important;
+  }
+  .logo {
+    display: none;
+  }
+
+  .logo-mobil {
+    display: block;
+    margin-right: 25%;
+    margin-left: 10px;
+  }
+
+  .left-header {
+    flex-basis: 100%;
+    order: 1;
+  }
+  #searchInput,
+  .search {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  .logo-mobil {
+    margin-left: 15px;
+    margin-right: 10%;
+  }
 }
 @media screen and (max-width: 425px) {
+  .richt-header {
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 398px) {
+  .container-header {
+    min-width: 320px;
+  }
+  .logo-mobil,
+  #searchInput {
+    margin-left: $margen-left;
+  }
+
+  .language,
+  .login-header {
+    padding-right: 7px;
+  }
 }

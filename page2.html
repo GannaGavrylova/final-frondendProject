@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
+    <div class="container-website">
     <!-- HEADER -->
     <div id="header"></div>
 
@@ -37,7 +38,126 @@
         <p></p>
       </div>
     </header> -->
+    <main>
+      <section class="combobox-menu">
+        <div class="combobox-menu-left">
+          <h3>Events near New York, NY</h3>
+          <a href=""> <p>Events</p> </a>
+          <div class="button-filter-container">
+            <button class="button-filter">
+              Any type
+              <select id="filter by-venue"></select>
+            </button>
+            <button class="button-filter">
+              Any distance
+              <select id="filter any-distance"></select>
+            </button>
+            <button class="button-filter">
+              Any category
+              <select id="filter any-category"></select>
+            </button>
+          </div>
+        </div>
+        <div class="combobox-menu-right">
+          <div class="text-menu-box">
+            <p>Find events near</p>
+            <h4>New York, NY</h4>
+          </div>
+          
+          <div class="map-box" id="position">
+            <img class="map" src="assets/images/map-thumbnail.png" alt="" />
+               <img class="button-close" src="assets/icons/close.svg" alt="" />
+           
+            <button class="browse" id="browseBtn">Browse in map</button>
+            <button class="expandMapIcon"></button>
+           
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="container_meetup">
+        <div class="container-meetup">
+          <img src="assets/fonts/media-one.png" alt="" class="foto-one-mobil" />
 
+          <div class="list-of-meetup">
+            <p>Wed, Mar 13 · 11:30 PM UTC</p>
+            <h4>All Nations - Manhattan Missions Church Bible Study</h4>
+            <h5>Hobbies and Passions (5km)</h5>
+            
+          </div>
+        </div>
+        <hr />
+        <div class="container-meetup">
+          <img src="assets/fonts/media-two.png" alt="" />
+
+          <div class="list-of-meetup">
+            <p>Sat, Mar 23 · 3:00 PM UTC</p>
+            <h4>INFJ Personality Type - Coffee Shop Meet & Greet</h4>
+            <h5>Hobbies and Passions (25km)</h5>
+            <p class="mobil-frei">Online Event</p>
+            <p>99 attendees</p>
+          </div>
+        </div>
+        <hr />
+        <div class="container-meetup">
+          <img src="assets/fonts/nycA-foto3.png" alt="" class="foto-three-mobil"/>
+
+          <div class="list-of-meetup">
+            <p>Wed, Mar 13 · 11:30 PM UTC</p>
+            <h4>
+              NYC AI Users - AI Tech Talks, Demo & Social: RAG <br />
+              Search and Customer Experience
+            </h4>
+            <h5>Technology (50 km)</h5>
+            
+            <p>43 attendees  <span style="color: red;">  2 spots left</span></p>
+          </div>
+        </div>
+        <hr />
+        <div class="container-meetup">
+          <img src="assets/fonts/appointments-foto4.png" alt=""  class="foto-three-mobil"/>
+        
+
+          <div class="list-of-meetup">
+            <p>Wed, Mar 13 · 11:30 PM UTC</p>
+            <h4>
+              Book 40+ Appointments Per Month Using AI and <br />
+              Automation
+            </h4>
+            <h5 class="technology">Technology</h5>
+            
+          </div>
+        </div>
+        <hr />
+        <div class="container-meetup">
+          <img src="assets/fonts/druck-foto4.png" alt="" class="foto-four-mobil"/>
+         
+
+          <div class="list-of-meetup">
+            <p>Wed, Mar 13 · 11:00 PM UTC</p>
+            <h4>Dump writing group weekly meetup</h4>
+            <h5>Hobbies and Passions</h5>
+            <p class="mobil-frei">Online Event</p>
+            <p>77 attendees</p>
+          </div>
+        </div>
+        <hr />
+        <div class="container-meetup">
+          <img src="assets/fonts/foto5-senior-meetup.png" alt="" class="foto-three-mobil" />
+          
+          <div class="list-of-meetup">
+            <p>Thu, Mar 14 · 11:00 PM UTC</p>
+            <h4>
+              Over 40s, 50s, & 60s Senior Singles Chat, Meet & <br />
+              Dating Community
+            </h4>
+            <h5>Hobbies and Passions</h5>
+            <p class="mobil-frei">Online Event</p>
+            <p>140 attendees</p>
+          </div>
+       
+      </section>
+    </main>
     <!-- Footer -->
 
     <div id="footer"></div>
@@ -115,8 +235,8 @@
         <p class="mobal-footer-inform">© 2024 Meetup</p>
       </div>
     </footer> -->
+  </div>
     <script src="scripts/main.js"></script>
-    <!-- <script src="scripts/header.js"></script>
-    <script src="scripts/footer.js"></script> -->
+    
   </body>
 </html>

@@ -26,9 +26,10 @@ footer {
   padding: 10px 14px;
   border-radius: 8px;
   margin-top: 34px;
+  cursor: pointer;
 }
 
-hr {
+.footer-separator {
   border: 1px solid #474646;
   width: $footer-width;
   margin-left: 196px;
@@ -52,6 +53,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  cursor: pointer;
 }
 
 ul > li:last-of-type {
@@ -75,6 +77,7 @@ li {
   display: flex;
   justify-content: space-between;
   margin: 12px 0 24px 0;
+  cursor: pointer;
 }
 .social-media {
   display: flex;
@@ -83,12 +86,23 @@ li {
 .social-media > img {
   width: 30px;
   height: 30px;
+  // transition: all 0.5s ease-out;
+}
+.social-media .social-icon:hover {
+  transition: all 1s ease-out;
+  transform: scale(1.5);
+  background-color: rgba(211, 12, 12, 10);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 .footer-inform {
   display: flex;
   justify-content: space-around;
   color: $color-text;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 .mobal-footer-inform {
   display: none;
@@ -115,7 +129,7 @@ li {
     margin: 30px 5px 35px 88px;
     gap: 15px;
   }
-  hr {
+  .footer-separator {
     width: 75%;
     margin-left: 88px;
   }
@@ -145,7 +159,7 @@ li {
     margin-right: 1em;
   }
   .section-ons,
-  hr,
+  .footer-separator,
   .container-section-two,
   .container-section-three {
     margin-left: 3em;
@@ -155,10 +169,14 @@ li {
   // FOOTER
 
   .section-ons,
-  hr,
+  .footer-separator,
   .container-section-two,
   .container-section-three {
     margin-left: 2em;
+  }
+
+  .section-ons > button {
+    padding: 10px 5px;
   }
   .markets,
   .footer-inform {

@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+main {
+  margin: $marginLeftRight;
+}
+
+// section - 1 combobox-menu
+.combobox-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 77px;
+  max-width: 1196px;
+}
+.combobox-menu-left {
+  flex: 1;
+  //   margin-right: 219px;
+}
+
+.combobox-menu-left > h3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.combobox-menu-left > a > p {
+  color: $backroundColor-button;
+  margin-bottom: 12px;
+}
+.button-filter-container {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 56px;
+}
+
+.button-filter {
+  padding: 16px;
+  border-radius: 35px;
+  background-color: #f6f7f8;
+  border: none;
+  cursor: pointer;
+}
+
+select {
+  border: none;
+  background-color: #f6f7f8;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.combobox-menu-right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-items: center;
+  position: relative;
+  padding-left: 219px;
+}
+.text-menu-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-menu-box > p {
+  font-size: 12px;
+  line-height: 16px;
+}
+.text-menu-box > h4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.map-box {
+  position: relative;
+  position: absolute;
+  display: inline-block;
+  top: 52px;
+  right: 0px;
+}
+.map {
+  width: 100%;
+  height: auto;
+}
+.button-close {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+.browse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 48px 12px 24px;
+  border-radius: 10px;
+  border: 1px solid $backroundColor-button;
+  color: $backroundColor-button;
+  cursor: pointer;
+  background-image: url(/assets/icons/expandMapIcon.svg);
+  background-repeat: no-repeat;
+  background-position: 120px;
+}
+.expandMapIcon {
+  display: none;
+}
+
+// section - 2  container_Meetup
+
+.container_meetup {
+  max-width: 1196px;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+hr {
+  border: 1px solid lightgray;
+  max-width: 604px;
+
+  margin-left: 0;
+}
+.container-meetup {
+  display: flex;
+  column-gap: 16px;
+}
+.container-meetup > img {
+  //   max-width: 159px;
+  //   max-height: 125px;
+  width: 159px;
+  min-height: 125px;
+}
+.container_meetup > .container-meetup:first-child {
+  margin-bottom: 75px;
+}
+.container-meetup {
+  margin-top: 20px;
+}
+
+.list-of-meetup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-of-meetup > p:first-child {
+  font-size: 14px;
+  line-height: 20px;
+  color: #7c6f50;
+  text-transform: uppercase;
+}
+
+.list-of-meetup > p:last-child {
+  margin-top: 48px;
+  margin-bottom: 13px;
+  color: $color-input;
+}
+.list-of-meetup > h5 {
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-input;
+}
+.mobil-frei {
+  display: none;
+}
+p > span {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+  .combobox-menu-left {
+    margin-right: 10%;
+    white-space: nowrap;
+  }
+  .combobox-menu-right {
+    padding-right: 0px;
+    margin-left: 0px;
+    padding-left: 10em;
+  }
+  .map-box {
+    top: 62px;
+    left: 150px;
+  }
+  .browse {
+    display: none;
+  }
+  .expandMapIcon {
+    display: flex;
+    position: absolute;
+    background-image: url(/assets/icons/expandMapIcon.svg);
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: 1px solid $backroundColor-button;
+    border-radius: 5px;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .combobox-menu-right {
+    padding-left: 4em;
+  }
+  .map-box {
+    top: 52px;
+    left: 15%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main {
+    margin: 0 100px 0 158px;
+  }
+  .combobox-menu-left {
+    margin-right: 0px;
+    overflow-x: scroll;
+  }
+  .button-filter-container {
+    white-space: nowrap;
+  }
+
+  .combobox-menu-left > h3 {
+    font-size: 26px;
+  }
+  .combobox-menu-right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    margin: 0 100px 0 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    margin: auto;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    margin: auto;
+    max-width: 80%;
+  }
+  .container-meetup > img {
+    width: 98px;
+    min-height: 55px;
+    max-height: 100px;
+  }
+  .list-of-meetup > p:last-child {
+    margin-top: 18px;
+  }
+  p > span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .technology {
+    margin-bottom: 1em;
+  }
+}
+@media screen and (max-width: 425px) {
+}
+.combobox-menu-left > h3 {
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
+@media screen and (max-width: 398px) {
+  main {
+    margin: auto;
+    max-width: 80%;
+  }
+  .combobox-menu-left {
+    margin-right: 0px;
+    width: 470px;
+  }
+  .button-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // section - 2
+
+  .container_meetup > .container-meetup:first-child {
+    margin-bottom: 1em;
+  }
+  .list-of-meetup > p:last-child {
+    margin-top: 8px;
+
+    color: $color-input;
+  }
+}
