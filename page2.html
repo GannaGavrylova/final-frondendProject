@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DiplomoProject Page 2</title>
     <link rel="stylesheet" href="styles/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <style>
+      #map {
+        height: 400px;
+      }
+    </style>
   </head>
   <body>
     <div class="container-website">
@@ -13,40 +23,59 @@
       <main>
         <section class="combobox-menu">
           <div class="combobox-menu-left">
-            <h3>Events near New York, NY</h3>
+            <div class="flex-container-title">
+              <h3>Events near New York, NY</h3>
+
+              <div class="text-menu-box">
+                <p>Find events near</p>
+                <h4>New York, NY</h4>
+                <div id="map"></div>
+              </div>
+            </div>
+
             <a href=""> <p>Events</p> </a>
             <div class="button-filter-container">
               <button class="button-filter" id="typeBtn">
-                Any type
-                <select id="filter by-venue"></select>
+                <select class="type select" id="filter by-venue">
+                  <option value="all">Any type</option>
+                  <option value="online">Onlein</option>
+                  <option value="offline">Offline</option>
+                </select>
               </button>
               <button class="button-filter" id="distanceBtn">
-                Any distance
-                <select class="distance" id="filter any-distance"></select>
+                <select class="distance select" id="filter any-distance">
+                  <option value="any">Any distance</option>
+                  <option value="5">5 km</option>
+                  <option value="10">10 km</option>
+                  <option value="15">15 km</option>
+                  <option value="25">25 km</option>
+                  <option value="50">50 km</option>
+                  <option value="75">75 km</option>
+                  <option value="100">100 km</option>
+                </select>
               </button>
               <button class="button-filter" id="categoryBtn">
-                Any category
-                <select class="category" id="filter any-category"></select>
+                <select class="category select" id="filter any-category">
+                  <option value="any">Any category</option>
+                  <option value="Social Activities">Social Activities</option>
+                  <option value="Hobbies and Passions">
+                    Hobbies and Passions
+                  </option>
+                  <option value="Health and Wellbeing">
+                    Health and Wellbeing
+                  </option>
+                  <option value="Business">Business</option>
+                  <option value="Technology">Technology</option>
+                </select>
               </button>
             </div>
-          </div>
-          <div class="combobox-menu-right">
-            <div class="text-menu-box">
-              <p>Find events near</p>
-              <h4>New York, NY</h4>
-            </div>
 
-            <div class="map-box" id="position">
-              <img class="map" src="assets/images/map-thumbnail.png" alt="" />
-              <img class="button-close" src="assets/icons/close.svg" alt="" />
-
-              <button class="browse" id="browseBtn">Browse in map</button>
-              <button class="expandMapIcon"></button>
-            </div>
+            <div id="events-container"></div>
           </div>
+          <!-- </div> -->
         </section>
-        <hr />
-        <section class="container_meetup">
+
+        <!-- <section class="container_meetup">
           <div class="container-meetup">
             <img
               src="assets/fonts/media-one.png"
@@ -143,7 +172,7 @@
               <p>140 attendees</p>
             </div>
           </div>
-        </section>
+        </section> -->
       </main>
 
       <!-- Footer -->
@@ -151,5 +180,6 @@
       <div id="footer"></div>
     </div>
     <script src="scripts/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </body>
 </html>

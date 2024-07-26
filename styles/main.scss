@@ -38,7 +38,6 @@ main {
   display: flex;
   flex-direction: column;
   margin-top: 98px;
-  margin-bottom: 98px;
   gap: 24px;
   margin-right: 54px;
   max-width: 608px;
@@ -269,6 +268,12 @@ main {
   padding: 8px 67px;
   cursor: pointer;
 }
+.signUp:hover {
+  background-color: rgb(255, 82, 154);
+  color: $colorText;
+  transition: all 0.5s ease;
+}
+
 .join_meetup_image {
   margin: 20px 56px 20px 90px;
 }
