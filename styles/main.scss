@@ -14,6 +14,13 @@ body {
   height: 100%;
   // margin: 0 auto;
 }
+.logoModal {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  padding: 10px 30px;
+}
+
 .container-website {
   max-width: 1512px;
   margin: 0 auto;
@@ -451,6 +458,102 @@ main {
   line-height: 24px;
   cursor: pointer;
 }
+//===  Button foter Posision
+
+.modalFooter {
+  position: relative;
+}
+.getStarted {
+  color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 0, 0, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 34px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 435px;
+}
+
+//================================ ModalWindow
+
+.modalContainer:not(.modalHidden) {
+  display: none;
+}
+
+// .modalHidden:not() {
+//   display: none;
+// }
+.modalContainer {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(177, 177, 177, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBody {
+  background-color: antiquewhite;
+  // max-width: 1550px;
+  // min-width: 1000px;
+  width: 550px;
+  height: 700px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modalBody > h2 {
+  margin-bottom: 10px;
+}
+#createGroupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+#groupName {
+  margin-bottom: 10px;
+  /* margin-right: 70px; */
+}
+
+#createGroupForm > input,
+#groupPrivacy,
+#groupCategory {
+  padding: 8px 55px;
+  border-radius: 10px;
+}
+
+#groupDescription {
+  padding: 20px 55px;
+  margin-bottom: 10px;
+}
+
+#groupImage > type {
+  border-radius: 10px;
+}
+
+.createGroup {
+  padding: 20px 20px;
+  margin: 10px 35% 20px 35%;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(255, 82, 154);
+  color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 1440px) {
   // section - 4 PLAN-OF-EVENTS
@@ -494,6 +597,34 @@ main {
     max-width: 364px;
     max-height: 185px;
     margin-top: 32px;
+  }
+  //================================ ModalWindow
+  .modalBody {
+    width: 50%;
+    height: 75%;
+    gap: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    #createGroupForm {
+      gap: 20px;
+
+      input,
+      #groupPrivacy,
+      #groupCategory {
+        padding: 3% 5%;
+      }
+    }
+  }
+
+  #groupDescription {
+    padding: 20px 5px;
+    margin-bottom: 20px;
+  }
+
+  .createGroup {
+    padding: 15px 10px;
+    margin: 5px 30% 20px 30%;
   }
 }
 
@@ -589,6 +720,42 @@ main {
   .join_meetup_sign_up > p {
     padding-right: 5px;
   }
+  //===  Button foter Posision
+
+  .getStarted {
+    left: 309px;
+  }
+
+  //================================ ModalWindow
+
+  .modalBody {
+    width: 50%;
+    height: 70%;
+    gap: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .modalBody > h2 {
+      margin-bottom: 0;
+    }
+    #createGroupForm {
+      gap: 25px;
+    }
+
+    #createGroupForm > input,
+    #groupPrivacy,
+    #groupCategory {
+      padding: 2% 10%;
+    }
+
+    #groupDescription {
+      padding: 2px 5px;
+      margin-bottom: 0px;
+    }
+    .createGroup {
+      margin-top: 5%;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   main {
@@ -624,7 +791,6 @@ main {
     align-self: center;
   }
 }
-
 @media screen and (max-width: 576px) {
   main {
     margin: auto;
@@ -723,6 +889,11 @@ main {
   .container-popular-cities {
     margin: 0;
   }
+  //===  Button foter Posision
+
+  .getStarted {
+    left: 270px;
+  }
 }
 @media screen and (max-width: 425px) {
   .search {
@@ -756,6 +927,11 @@ main {
     background-position: 160px;
     max-width: 190px;
     padding: 5px;
+  }
+  //===  Button foter Posision
+
+  .getStarted {
+    left: 232px;
   }
 }
 @media screen and (max-width: 398px) {

@@ -19,7 +19,13 @@
   <body>
     <div class="container-website">
       <!-- HEADER -->
-      <div id="header"></div>
+      <div class="logo">
+        <a href="http://127.0.0.1:5501/main.html">
+          <button class="logoModal">MeetUp</button>
+        </a>
+        <div id="header_page2"></div>
+      </div>
+
       <main>
         <section class="combobox-menu">
           <div class="combobox-menu-left">
@@ -176,10 +182,73 @@
       </main>
 
       <!-- Footer -->
+      <div class="modalFooter">
+        <div id="footer"></div>
+        <button class="getStarted">Get Started</button>
+      </div>
 
-      <div id="footer"></div>
+      <!-- Modal-Window -->
+
+      <div class="modalContainer">
+        <div class="modalBody">
+          <h2>Create Your Meetup Group</h2>
+          <form id="createGroupForm">
+            <label for="groupName">Group Name</label>
+            <input type="text" id="groupName" name="groupName" required />
+
+            <label for="groupDescription">Group Discription</label>
+            <textarea
+              name="groupDescription"
+              id="groupDescription"
+              rows="4"
+              required
+            ></textarea>
+
+            <label for="groupLocation">Location</label>
+            <input
+              type="text"
+              id="groupLocation"
+              name="groupLocation"
+              required
+            />
+
+            <label for="groupCategory">Category</label>
+            <select id="groupCategory" name="groupCategory" required>
+              <option value="">Select Category</option>
+              <option value="tech">Tech</option>
+              <option value="Business">Business</option>
+              <option value="health">Health</option>
+              <option value="hobbies">Hobbies & Passions</option>
+              <option value="social">Social Activities</option>
+              <option value="wellbeing">Wellbeing</option>
+            </select>
+
+            <label for="groupPrivacy">Privacy</label>
+            <select name="groupPrivacy" id="groupPrivacy" required>
+              <option value=""></option>
+              <option value="public">Public</option>
+              <option value="private">Private</option>
+            </select>
+
+            <label for="groupImage">Group Image</label>
+            <input
+              type="file"
+              id="groupImage"
+              name="groupImage"
+              accept="image/png, image/jpeg"
+              multiple
+            />
+            <!-- <div class="preview">
+                    <p>No files currently selected for upload</p>
+                  </div> -->
+
+            <button class="createGroup" type="submit">Create Group</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="scripts/main.js"></script>
+
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </body>
 </html>

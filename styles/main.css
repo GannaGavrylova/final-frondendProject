@@ -41,7 +41,7 @@
   background-color: red;
   border: none;
   width: 42px;
-  height: 42px;
+  height: 43px;
   border-radius: 0px 8px 8px 0px;
   cursor: pointer;
 }
@@ -358,6 +358,12 @@ body {
   margin: 0 auto;
 }
 
+.logoModal {
+  background-color: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+}
+
 main {
   margin: 0 158px 0 158px;
 }
@@ -438,10 +444,6 @@ select {
   left: 0;
 }
 
-.expandMapIcon {
-  display: none;
-}
-
 .event-card {
   display: flex;
   -moz-column-gap: 10px;
@@ -480,6 +482,29 @@ select {
   width: 604px;
   top: 170px;
   z-index: 10;
+}
+
+.modalFooter {
+  position: relative;
+}
+
+.getStarted {
+  color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 0, 0, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 34px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 435px;
+}
+
+select > option {
+  background-color: rgb(224, 250, 250);
 }
 
 @media screen and (max-width: 1440px) {
@@ -548,6 +573,9 @@ select {
   .imgCartContainer > hr {
     top: 130px;
   }
+  .getStarted {
+    left: 309px;
+  }
 }
 @media screen and (max-width: 768px) {
   main {
@@ -596,6 +624,14 @@ select {
   .technology {
     margin-bottom: 1em;
   }
+  .getStarted {
+    left: 270px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .getStarted {
+    left: 300px;
+  }
 }
 @media screen and (max-width: 398px) {
   main {
@@ -643,6 +679,13 @@ select {
 body {
   width: 100%;
   height: 100%;
+}
+
+.logoModal {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  padding: 10px 30px;
 }
 
 .container-website {
@@ -1099,6 +1142,97 @@ main {
   cursor: pointer;
 }
 
+.modalFooter {
+  position: relative;
+}
+
+.getStarted {
+  color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 0, 0, 0);
+  border: 2px solid rgba(255, 255, 255, 0);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 34px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 435px;
+}
+
+.modalContainer:not(.modalHidden) {
+  display: none;
+}
+
+.modalContainer {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(177, 177, 177, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBody {
+  background-color: antiquewhite;
+  width: 550px;
+  height: 700px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modalBody > h2 {
+  margin-bottom: 10px;
+}
+
+#createGroupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+#groupName {
+  margin-bottom: 10px;
+  /* margin-right: 70px; */
+}
+
+#createGroupForm > input,
+#groupPrivacy,
+#groupCategory {
+  padding: 8px 55px;
+  border-radius: 10px;
+}
+
+#groupDescription {
+  padding: 20px 55px;
+  margin-bottom: 10px;
+}
+
+#groupImage > type {
+  border-radius: 10px;
+}
+
+.createGroup {
+  padding: 20px 20px;
+  margin: 10px 35% 20px 35%;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(255, 82, 154);
+  color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1440px) {
   .plan-of-events {
     grid-template-columns: repeat(3, 1fr);
@@ -1133,6 +1267,29 @@ main {
     max-width: 364px;
     max-height: 185px;
     margin-top: 32px;
+  }
+  .modalBody {
+    width: 50%;
+    height: 75%;
+    gap: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .modalBody #createGroupForm {
+    gap: 20px;
+  }
+  .modalBody #createGroupForm input,
+  .modalBody #createGroupForm #groupPrivacy,
+  .modalBody #createGroupForm #groupCategory {
+    padding: 3% 5%;
+  }
+  #groupDescription {
+    padding: 20px 5px;
+    margin-bottom: 20px;
+  }
+  .createGroup {
+    padding: 15px 10px;
+    margin: 5px 30% 20px 30%;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1205,6 +1362,34 @@ main {
   }
   .join_meetup_sign_up > p {
     padding-right: 5px;
+  }
+  .getStarted {
+    left: 309px;
+  }
+  .modalBody {
+    width: 50%;
+    height: 70%;
+    gap: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .modalBody .modalBody > h2 {
+    margin-bottom: 0;
+  }
+  .modalBody #createGroupForm {
+    gap: 25px;
+  }
+  .modalBody #createGroupForm > input,
+  .modalBody #groupPrivacy,
+  .modalBody #groupCategory {
+    padding: 2% 10%;
+  }
+  .modalBody #groupDescription {
+    padding: 2px 5px;
+    margin-bottom: 0px;
+  }
+  .modalBody .createGroup {
+    margin-top: 5%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1324,6 +1509,9 @@ main {
   .container-popular-cities {
     margin: 0;
   }
+  .getStarted {
+    left: 270px;
+  }
 }
 @media screen and (max-width: 425px) {
   .search {
@@ -1353,6 +1541,9 @@ main {
     background-position: 160px;
     max-width: 190px;
     padding: 5px;
+  }
+  .getStarted {
+    left: 232px;
   }
 }
 @media screen and (max-width: 398px) {

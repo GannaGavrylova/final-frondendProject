@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       document.getElementById("header").innerHTML = data;
     });
+  // функция загрузки header_page2
+  fetch("components/header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header_page2").innerHTML = data;
+    });
 
   // функция загрузки footer
   fetch("components/footer.html")
@@ -132,6 +138,8 @@ const categorySelect = document.querySelector(".category");
 
 const eventsContainer = document.querySelector("#events-container");
 
+// функция фильтрации
+
 let map;
 let markers = [];
 
@@ -207,4 +215,39 @@ document.addEventListener("DOMContentLoaded", () => {
   typeSelect.addEventListener("change", filterCard);
   categorySelect.addEventListener("change", filterCard);
   distanceSelect.addEventListener("change", filterCard);
+});
+
+// функция вызова модального окна
+const getStarted = document.querySelector(".getStarted");
+
+const modalForm = document.querySelector(".modalContainer");
+
+const modalBody = document.querySelector(".modalBody");
+
+const logoModal = document.querySelector(".logoModal");
+
+const joinMeetupBtn = document.querySelector(".join-meetup");
+
+function toggleModalForm() {
+  modalForm.classList.toggle("modalHidden");
+}
+getStarted.addEventListener("click", toggleModalForm);
+
+modalForm.addEventListener("click", toggleModalForm);
+
+modalBody.addEventListener("click", (event) => {
+  event.stopPropagation();
+
+  logoModal.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+  joinMeetupBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    toggleModalForm();
+  }
 });
